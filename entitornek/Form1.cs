@@ -143,5 +143,23 @@ namespace entitornek
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            var sorgu = from d1 in db.notlartablo
+                        join d2 in db.ogrencitablo
+                        on d1.OGR equals d2.ID
+                        select new
+                        {
+                            öğrenci=d2.AD,
+                            sınav1=d1.SINAV1,
+                            sınav2=d1.SINAV2,
+                            sınav3=d1.SINAV3,
+                         ortalama=d1.ORTALAMA
+
+
+                        };
+            dataGridView1.DataSource = sorgu.ToList();
+        }
     }
 }

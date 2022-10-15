@@ -290,8 +290,9 @@ namespace entitornek
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(130, 42);
             this.button9.TabIndex = 26;
-            this.button9.Text = "SINAV NOTU GÜNCELLE";
+            this.button9.Text = "JOİN İLE GETİR";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
