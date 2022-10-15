@@ -65,6 +65,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="notlistele" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbSinavOgrenciModelStoreContainer">
           <EntitySet Name="derslertablo" EntityType="Self.derslertablo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="kulup" EntityType="Self.kulup" Schema="dbo" store:Type="Tables" />
@@ -153,6 +154,7 @@
             <End Role="notlartablo" EntitySet="notlartablo" />
           </AssociationSet>
           <EntitySet Name="kulup" EntityType="DbSinavOgrenciModel.kulup" />
+          <FunctionImport Name="notlistele" ReturnType="Collection(DbSinavOgrenciModel.notlistele_Result)" />
         </EntityContainer>
         <EntityType Name="kulup">
           <Key>
@@ -161,6 +163,16 @@
           <Property Name="KULUPID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="KULUPAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <ComplexType Name="notlistele_Result">
+          <Property Type="Int32" Name="NOTID" Nullable="false" />
+          <Property Type="String" Name="AD_SOYAD" Nullable="true" MaxLength="101" />
+          <Property Type="Int32" Name="DERS" Nullable="true" />
+          <Property Type="Int16" Name="SINAV1" Nullable="true" />
+          <Property Type="Int16" Name="SINAV2" Nullable="true" />
+          <Property Type="Int16" Name="SINAV3" Nullable="true" />
+          <Property Type="Decimal" Name="ORTALAMA" Nullable="true" Precision="5" Scale="2" />
+          <Property Type="Boolean" Name="DURUM" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -207,6 +219,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="notlistele" FunctionName="DbSinavOgrenciModel.Store.notlistele">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbSinavOgrenciModel.notlistele_Result">
+                <ScalarProperty Name="NOTID" ColumnName="NOTID" />
+                <ScalarProperty Name="AD_SOYAD" ColumnName="AD SOYAD" />
+                <ScalarProperty Name="DERS" ColumnName="DERS" />
+                <ScalarProperty Name="SINAV1" ColumnName="SINAV1" />
+                <ScalarProperty Name="SINAV2" ColumnName="SINAV2" />
+                <ScalarProperty Name="SINAV3" ColumnName="SINAV3" />
+                <ScalarProperty Name="ORTALAMA" ColumnName="ORTALAMA" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

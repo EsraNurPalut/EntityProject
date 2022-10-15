@@ -89,5 +89,12 @@ namespace entitornek
             db.SaveChanges();
             MessageBox.Show("ÖĞRENCİ BİLGİLERİ BAŞARIYLA GÜNCELLENDİ...");
         }
+
+        private void button10_Click(object sender, EventArgs e) //prosedür butonu
+        {
+            DbSinavOgrenciEntities db = new DbSinavOgrenciEntities();
+            dataGridView1.DataSource = db.notlistele();
+
+        }
     }
 }

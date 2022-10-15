@@ -64,6 +64,7 @@ namespace entitornek
             this.label10 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,12 +76,12 @@ namespace entitornek
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(-1, 1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(804, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(804, 167);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 200);
+            this.button1.Location = new System.Drawing.Point(-1, 160);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 42);
             this.button1.TabIndex = 1;
@@ -90,7 +91,7 @@ namespace entitornek
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 241);
+            this.button2.Location = new System.Drawing.Point(-1, 200);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 42);
             this.button2.TabIndex = 2;
@@ -100,7 +101,7 @@ namespace entitornek
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 289);
+            this.button3.Location = new System.Drawing.Point(-1, 241);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 42);
             this.button3.TabIndex = 3;
@@ -110,7 +111,7 @@ namespace entitornek
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 336);
+            this.button4.Location = new System.Drawing.Point(-1, 278);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(130, 42);
             this.button4.TabIndex = 4;
@@ -120,7 +121,7 @@ namespace entitornek
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 378);
+            this.button5.Location = new System.Drawing.Point(-1, 316);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 42);
             this.button5.TabIndex = 5;
@@ -376,7 +377,7 @@ namespace entitornek
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 420);
+            this.button6.Location = new System.Drawing.Point(-1, 355);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(130, 42);
             this.button6.TabIndex = 17;
@@ -386,7 +387,7 @@ namespace entitornek
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(12, 468);
+            this.button7.Location = new System.Drawing.Point(-1, 386);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(130, 42);
             this.button7.TabIndex = 18;
@@ -394,11 +395,22 @@ namespace entitornek
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(-1, 420);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(130, 42);
+            this.button10.TabIndex = 19;
+            this.button10.Text = "Prosedür";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 516);
+            this.ClientSize = new System.Drawing.Size(800, 559);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox3);
@@ -461,6 +473,7 @@ namespace entitornek
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button10;
     }
 }
 

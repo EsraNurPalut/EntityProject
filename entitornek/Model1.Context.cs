@@ -12,6 +12,8 @@ namespace entitornek
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DbSinavOgrenciEntities : DbContext
     {
@@ -29,5 +31,10 @@ namespace entitornek
         public virtual DbSet<notlartablo> notlartablo { get; set; }
         public virtual DbSet<ogrencitablo> ogrencitablo { get; set; }
         public virtual DbSet<kulup> kulup { get; set; }
+    
+        public virtual ObjectResult<notlistele_Result> notlistele()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<notlistele_Result>("notlistele");
+        }
     }
 }
