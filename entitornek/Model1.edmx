@@ -4,13 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbSinavOgrenciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbSinavOgrenciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="derslertablo">
           <Key>
             <PropertyRef Name="DERSID" />
           </Key>
           <Property Name="DERSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DERSAD" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kulup">
+          <Key>
+            <PropertyRef Name="KULUPID" />
+          </Key>
+          <Property Name="KULUPID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULUPAD" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="notlartablo">
           <Key>
@@ -60,6 +67,7 @@
         </Association>
         <EntityContainer Name="DbSinavOgrenciModelStoreContainer">
           <EntitySet Name="derslertablo" EntityType="Self.derslertablo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kulup" EntityType="Self.kulup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="notlartablo" EntityType="Self.notlartablo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ogrencitablo" EntityType="Self.ogrencitablo" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_notlartablo_derslertablo" Association="Self.FK_notlartablo_derslertablo">
@@ -71,8 +79,7 @@
             <End Role="notlartablo" EntitySet="notlartablo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbSinavOgrenciModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -145,7 +152,15 @@
             <End Role="ogrencitablo" EntitySet="ogrencitablo" />
             <End Role="notlartablo" EntitySet="notlartablo" />
           </AssociationSet>
+          <EntitySet Name="kulup" EntityType="DbSinavOgrenciModel.kulup" />
         </EntityContainer>
+        <EntityType Name="kulup">
+          <Key>
+            <PropertyRef Name="KULUPID" />
+          </Key>
+          <Property Name="KULUPID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULUPAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -181,6 +196,14 @@
                 <ScalarProperty Name="AD" ColumnName="AD" />
                 <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
                 <ScalarProperty Name="FOTOGRAF" ColumnName="FOTOGRAF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kulup">
+            <EntityTypeMapping TypeName="DbSinavOgrenciModel.kulup">
+              <MappingFragment StoreEntitySet="kulup">
+                <ScalarProperty Name="KULUPAD" ColumnName="KULUPAD" />
+                <ScalarProperty Name="KULUPID" ColumnName="KULUPID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

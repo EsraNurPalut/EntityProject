@@ -28,5 +28,6 @@ namespace entitornek
         public virtual DbSet<derslertablo> derslertablo { get; set; }
         public virtual DbSet<notlartablo> notlartablo { get; set; }
         public virtual DbSet<ogrencitablo> ogrencitablo { get; set; }
+        public virtual DbSet<kulup> kulup { get; set; }
     }
 }

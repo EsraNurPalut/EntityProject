@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="DbSinavOgrenciModel.ogrencitablo" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <AssociationConnector Association="DbSinavOgrenciModel.FK_notlartablo_derslertablo" ManuallyRouted="false" />
         <AssociationConnector Association="DbSinavOgrenciModel.FK_notlartablo_ogrencitablo" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbSinavOgrenciModel.kulup" Width="1.5" PointX="3.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
