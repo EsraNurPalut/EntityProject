@@ -127,6 +127,16 @@ namespace entitornek
                 List<ogrencitablo> liste3 = db.ogrencitablo.OrderBy(p => p.AD).Take(3).ToList();
                 dataGridView1.DataSource = liste3;
             }
+            if (radioButton4.Checked==true)  // adı a ile başlayanlar
+            {
+                List<ogrencitablo> liste4 = db.ogrencitablo.Where(p => p.AD.StartsWith("a")).ToList();
+                dataGridView1.DataSource = liste4;
+            }
+            if (radioButton5.Checked=true)  //toplam öğrenci sayısı
+            {
+                int toplam = db.ogrencitablo.Count();
+                MessageBox.Show(toplam.ToString(), "TOPLAM ÖĞRENCİ SAYISI ");
+            }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
