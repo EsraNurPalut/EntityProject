@@ -96,5 +96,11 @@ namespace entitornek
             dataGridView1.DataSource = db.notlistele();
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DbSinavOgrenciEntities db = new DbSinavOgrenciEntities();
+            dataGridView1.DataSource = db.ogrencitablo.Where(x => x.AD == textBox2.Text).ToList();
+        }
     }
 }
