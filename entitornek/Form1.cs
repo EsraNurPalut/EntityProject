@@ -77,5 +77,17 @@ namespace entitornek
             db.SaveChanges();
             MessageBox.Show("ÖĞRENCİ SİSTEMDEN SİLİNDİ...");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DbSinavOgrenciEntities db = new DbSinavOgrenciEntities();
+            int İd = Convert.ToInt32(textBox1.Text);
+            var x = db.ogrencitablo.Find(İd);
+            x.AD = textBox2.Text;
+            x.SOYAD = textBox3.Text;
+            x.FOTOGRAF = textBox4.Text;
+            db.SaveChanges();
+            MessageBox.Show("ÖĞRENCİ BİLGİLERİ BAŞARIYLA GÜNCELLENDİ...");
+        }
     }
 }

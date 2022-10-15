@@ -45,11 +45,16 @@ namespace entitornek
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -57,13 +62,8 @@ namespace entitornek
             this.label8 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -116,6 +116,7 @@ namespace entitornek
             this.button4.TabIndex = 4;
             this.button4.Text = "Güncelle";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -214,12 +215,21 @@ namespace entitornek
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Location = new System.Drawing.Point(330, 364);
+            this.groupBox2.Location = new System.Drawing.Point(238, 386);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DERSLER";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "SOYAD";
             // 
             // textBox7
             // 
@@ -244,15 +254,6 @@ namespace entitornek
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 23;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "SOYAD";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button9);
@@ -273,6 +274,50 @@ namespace entitornek
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "NOTLAR";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(29, 243);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(130, 42);
+            this.button9.TabIndex = 26;
+            this.button9.Text = "SINAV NOTU GÜNCELLE";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(29, 186);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(130, 42);
+            this.button8.TabIndex = 25;
+            this.button8.Text = "HESAPLA";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(89, 148);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 20);
+            this.textBox11.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 155);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(48, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "DURUM";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "SINAV 2";
             // 
             // textBox5
             // 
@@ -329,32 +374,6 @@ namespace entitornek
             this.label10.TabIndex = 14;
             this.label10.Text = "SINAV 1";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 13);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "SINAV 2";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 155);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "DURUM";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(89, 148);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 24;
-            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(12, 420);
@@ -374,24 +393,6 @@ namespace entitornek
             this.button7.Text = "Not Listele";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(29, 186);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(130, 42);
-            this.button8.TabIndex = 25;
-            this.button8.Text = "HESAPLA";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(29, 243);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(130, 42);
-            this.button9.TabIndex = 26;
-            this.button9.Text = "SINAV NOTU GÜNCELLE";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
