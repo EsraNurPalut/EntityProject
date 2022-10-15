@@ -102,5 +102,15 @@ namespace entitornek
             DbSinavOgrenciEntities db = new DbSinavOgrenciEntities();
             dataGridView1.DataSource = db.ogrencitablo.Where(x => x.AD == textBox2.Text).ToList();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            DbSinavOgrenciEntities db = new DbSinavOgrenciEntities();
+            string aranan = textBox2.Text;
+            var degerler = from item in db.ogrencitablo
+                           where item.AD.Contains(aranan)
+                           select item;
+            dataGridView1.DataSource = degerler.ToList();
+        }
     }
 }
