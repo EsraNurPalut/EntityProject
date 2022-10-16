@@ -9,5 +9,8 @@ namespace EntityCodeFirst.Entity
     class Context : DbContext
     {
         public DbSet<urunler> urunlers { get; set; }
+
+        public DbSet<Kategori> kategoris { get; set; }
+
     }
 }
