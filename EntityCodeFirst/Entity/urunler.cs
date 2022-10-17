@@ -23,9 +23,9 @@ namespace EntityCodeFirst.Entity
         {
             get; set;
         }
-        public int urunstok { get;  set; }
+        public int urunstok { get; set; }
         public string aciklama { get; set; }
         public Kategori Kategori { get; set; } // bir ürünün sadece bir tane kategori oldugu için bunu yazdık.
-         
+    
     }
 }

@@ -12,5 +12,11 @@ namespace EntityCodeFirst.Entity
 
         public DbSet<Kategori> kategoris { get; set; }
 
+        public DbSet<Müsteriler> musteris { get; set; }
+
+
+
+
+
     }
 }
