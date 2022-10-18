@@ -8,11 +8,11 @@ namespace EntityCodeFirst.Entity
 {
     class Context : DbContext
     {
-        public DbSet<urunler> urunlers { get; set; }
+        public DbSet<urunler> Urunlers { get; set; }
 
-        public DbSet<Kategori> kategoris { get; set; }
+        public DbSet<Kategori> Kategoris { get; set; }
 
-        public DbSet<Müsteriler> musteris { get; set; }
+        public DbSet<Musteri> Musteris { get; set; }
 
 
 

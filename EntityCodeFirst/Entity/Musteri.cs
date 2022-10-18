@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace EntityCodeFirst.Entity
 {
-    class Müsteriler
+    public class Musteri
     {
         [Key]
         public int musteriID { get; set; }
-
         public string musteriad { get; set; }
-
         public string musterisoyad { get; set; }
     }
 }

@@ -5,15 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EntityCodeFirst.Entity
 {
-    class Kategori
+  public  class Kategori
     {
         [Key]
         public  int kategoriıd { get;set;}
 
         public string kategoriad { get; set; }
 
-        public ICollection<urunler>urunlers { get; set; }  //  kategorilerin içerisinde birden fazla ürün yer alabilir. bir kategori birden fazla üründe yer alabilir..
+        public ICollection<urunler> Urunlers { get; set; }  //  kategorilerin içerisinde birden fazla ürün yer alabilir. bir kategori birden fazla üründe yer alabilir..
     }
 }
