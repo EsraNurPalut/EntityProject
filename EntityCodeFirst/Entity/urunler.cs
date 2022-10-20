@@ -16,6 +16,8 @@ namespace EntityCodeFirst.Entity
         public string urunkategori  { get; set; }
         public int urunstok { get; set; }
         public string aciklama { get; set; }
+        public string magaza { get; set; }
+        public string sehir { get; set; }
 
         public Kategori Kategori { get; set; } // bir ürünün sadece bir tane kategori oldugu için bunu yazdık.
     }
