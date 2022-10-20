@@ -14,5 +14,8 @@ namespace EntityCodeFirst.Entity
         public string musteriad { get; set; }
         public string musterisoyad { get; set; }
         public string müsteriadres { get; set; }
+        public string müsterisehir { get; set; }
+        public string müsteriulke { get; set; }
+
     }
 }
