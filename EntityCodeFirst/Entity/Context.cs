@@ -15,6 +15,9 @@ namespace EntityCodeFirst.Entity
         public DbSet<Musteri> Musteris { get; set; }
 
 
+   
+
+
 
 
 
