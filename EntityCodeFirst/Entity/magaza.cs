@@ -15,9 +15,6 @@ namespace EntityCodeFirst.Entity
         public string magazail { get; set; }
         public string magazaadres { get; set; }
 
-        internal void Show()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
