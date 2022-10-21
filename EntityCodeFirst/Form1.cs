@@ -19,14 +19,37 @@ namespace EntityCodeFirst
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Context c = new Context();
-            c.Database.Create();
+            //Context c = new Context();
+            //c.Database.Create();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
+            Musteri go = new Musteri();
+            go.Show();
+            this.Hide();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Kategori go = new Kategori();
+            go.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            urunler go = new urunler();
+            go.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            magaza go = new magaza();
+            go.Show();
+            this.Hide();
         }
     }
 }

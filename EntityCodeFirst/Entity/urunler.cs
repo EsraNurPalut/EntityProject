@@ -20,6 +20,11 @@ namespace EntityCodeFirst.Entity
         public string sehir { get; set; }
 
         public Kategori Kategori { get; set; } // bir ürünün sadece bir tane kategori oldugu için bunu yazdık.
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
     

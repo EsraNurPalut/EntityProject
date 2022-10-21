@@ -14,5 +14,10 @@ namespace EntityCodeFirst.Entity
         public string magazaad { get; set; }
         public string magazail { get; set; }
         public string magazaadres { get; set; }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

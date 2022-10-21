@@ -17,5 +17,9 @@ namespace EntityCodeFirst.Entity
         public string müsterisehir { get; set; }
         public string müsteriulke { get; set; }
 
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
